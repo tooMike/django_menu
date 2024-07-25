@@ -1,0 +1,26 @@
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <style>
+        .nav .nav {
+            margin-left: 20px;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            color: #0056b3 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        {% draw_menu 'Menu1' %}
+    </div>
+
+</body>
+</html>
