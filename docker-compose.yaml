@@ -1,6 +1,20 @@
 version: '3.3'
 
+volumes:
+  static:
+
 services:
 
   backend:
     build: ./menu/
+    volumes:
+      - static:/backend_static
+
+  nginx:
+    build: ./nginx/
+    depends_on:
+      - backend
+    ports:
+      - "8000:80"
+    volumes:
+      - static:/backend_static
