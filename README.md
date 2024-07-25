@@ -44,7 +44,7 @@ http://127.0.0.1:8000/
 
 # Добавление тестовых данных
 
-Выполнить команду import_data в контейнере backend:
+Выполнить команду create_test_menus в контейнере backend:
 
 ```
 docker compose exec backend python manage.py create_test_menus
